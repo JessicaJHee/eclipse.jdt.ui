@@ -376,7 +376,7 @@ public class CompilationUnitRewrite {
 
 	}
 
-	private ImportRewrite createImportRewrite(CompilationUnit astRoot, boolean restoreExistingImports) {
+	public ImportRewrite createImportRewrite(CompilationUnit astRoot, boolean restoreExistingImports) {
 		ImportRewrite rewrite= CodeStyleConfiguration.createImportRewrite(astRoot, restoreExistingImports);
 		if (astRoot.getAST().hasResolvedBindings()) {
 			rewrite.setUseContextToFilterImplicitImports(true);
